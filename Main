@@ -11,6 +11,7 @@
 
 local Main = Instance.new("ScreenGui")
 local MBack = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
 
 -- Properties
 
@@ -23,4 +24,13 @@ MBack.Parent = Main
 MBack.BackgroundColor3 = Color3.new(1, 1, 1)
 MBack.Position = UDim2.new(0.14776358, 0, 0.497881323, 0)
 MBack.Size = UDim2.new(0, 100, 0, 100)
-MBack.Visible = false
+
+TextButton.Parent = MBack
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextSize = 14
+TextButton.MouseButton1Click:Connect(function()
+	MBack.Visible = false
+end)
